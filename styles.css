@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+#container {
+  height: auto;
+  margin: auto;
+  border: 0px solid blue;
+}
+
+/* Top Container */
+#container > #top-container {
+  border: 0px solid red;
+  height: 60px;
+  align-items: center;
+  margin: auto;
+}
+
+/* Navbar */
+#container > #top-container > .navbar {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 50px;
+  align-items: center;
+  border: 0px solid rgb(0, 255, 187);
+  justify-content: space-between;
+}
+
+#container > #top-container > .navbar > .navbar-left {
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  border: 0px solid rgb(0, 255, 26);
+  justify-content: space-around;
+  align-items: center;
+}
+
+#container > #top-container > .navbar > .navbar-right {
+  width: 10%;
+  display: flex;
+  gap: 15px;
+  border: 0px solid rgb(255, 157, 0);
+}
+
+#container > #top-container > .navbar > .navbar-right > div {
+  font-size: 27px;
+  border: 0px solid rgb(255, 157, 0);
+}
+
+#container > #top-container > .navbar > .navbar-left h3 {
+  font-family: "YourFontFamily", sans-serif;
+  font-size: 21px;
+  color: black;
+  font-weight: normal;
+  font-style: unset;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+
+.hamburger-menu > .barmenu {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 3.2px 0;
+}
+
+/* Mid Container */
+#mid-container {
+  position: relative;
+}
+
+#mid-container .background-top-img-first img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 90%;
+}
+
+#mid-container .background-top-img-second {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  background: linear-gradient(black, gray);
+  padding: 20px;
+  width: 10%;
+  z-index: 1;
+}
+
+#mid-container .background-top-img-second h4 {
+  font-size: 1vw;
+  color: white;
+  font-family: "YourFontFamily", sans-serif;
+  font-style: unset;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  background-color: gray;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+}
+
+/* Bottom Container */
+#bottom-container {
+  background-color: lightgray;
+  padding: 30px;
+}
+
+#bottom-container > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bottom-container img {
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cards1,
+.cards2,
+.cards3 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  box-sizing: border-box;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.cards2 div,
+.cards3 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards3 div {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.cards1 button,
+.cards2 button,
+.cards3 button {
+  margin-top: 20px;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+
+/* Media Query for Tablets (between 761px and 1000px) */
+@media (min-width: 761px) and (max-width: 1000px) {
+  /* Navbar */
+  #container > #top-container > .navbar > .navbar-left {
+    width: 80%;
+    padding-left: 13%;
+    margin-left: 0;
+  }
+
+  #container > #top-container > .navbar > .navbar-right {
+    width: 20%;
+    margin-left: 0;
+    padding-left: 5%;
+    padding-right: 3%;
+    justify-content: flex-end;
+  }
+
+  #container > #top-container > .navbar > .navbar-left h3 {
+    font-size: 20px;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* Mid Container */
+  #mid-container {
+    position: relative;
+  }
+
+  #mid-container .background-top-img-first img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 90%;
+  }
+
+  #mid-container .background-top-img-second {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: linear-gradient(black, gray);
+    padding: 20px;
+    width: 10%;
+    z-index: 1;
+  }
+
+  #mid-container .background-top-img-second h4 {
+    font-size: 1vw;
+    color: white;
+    font-family: "YourFontFamily", sans-serif;
+    font-style: unset;
+    text-align: center;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-color: gray;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Bottom Container */
+  #bottom-container {
+    background-color: lightgray;
+    padding: 30px;
+  }
+  #bottom-container > div > div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #bottom-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .cards1,
+  .cards2,
+  .cards3 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-sizing: border-box;
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  .cards2 div,
+  .cards3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cards3 div {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .cards1 button {
+    margin-top: 20px;
+    width: 100px;
+    background-color: black;
+    color: white;
+  }
+
+  .cards2 button {
+    margin-top: 20px;
+    width: 100px;
+    background-color: black;
+    color: white;
+  }
+
+  .cards3 button {
+    margin-top: 20px;
+    width: 100px;
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Media Query for Small Screens (Mobile) */
+/* Media Query for Small Screens (Mobile) */
+/* Media Query for Small Screens (Mobile) */
+@media (max-width: 760px) {
+  /* Navbar */
+  #container > #top-container > .navbar > .navbar-left {
+    display: none;
+  }
+
+  #container > #top-container > .navbar > .navbar-right {
+    margin-right: 5%;
+    justify-content: flex-end;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  /* Middle container */
+
+  #mid-container .background-top-img-second {
+    bottom: 40%;
+    width: 40px;
+    height: 4px; /* Adjust width as needed */
+  }
+
+  #mid-container .background-top-img-second h4 {
+    font-size: 1vw;
+    color: white;
+    font-family: "YourFontFamily", sans-serif;
+    font-style: unset;
+    text-align: center;
+  }
+
+  /* Bottom Container - Cards */
+  #bottom-container > div > div {
+    flex-direction: column; /* Set cards to stack vertically */
+    align-items: flex-start;
+  }
+
+  .cards1,
+  .cards2,
+  .cards3 {
+    width: 100%;
+    margin-top: 10px; /* Added margin to separate cards */
+  }
+
+  .cards1 img,
+  .cards2 img,
+  .cards3 img {
+    width: 100%;
+    height: auto;
+  }
+}
